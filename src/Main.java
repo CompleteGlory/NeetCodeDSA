@@ -51,5 +51,6 @@ public class Main {
         TwoDimensionalDP d = new TwoDimensionalDP();
         int[][] cache = new int[4][4];
         System.out.println(d.memoization(0,0,4,4,cache));
+        System.out.println(d.dp(4,4));
     }
 }

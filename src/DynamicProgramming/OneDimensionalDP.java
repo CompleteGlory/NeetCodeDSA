@@ -8,15 +8,14 @@ public class OneDimensionalDP {
         return bruteForceFib(n-1)+bruteForceFib(n-2);
     }
     // memoization
-    int memoization(int n , int[] cache){
-        if(n<2){
+    public int memoization(int n , int[] cache){
+        if(n < 2){
             return n;
         }
-        if(cache[n]!=0){
+        if (cache[n]!=0){
             return cache[n];
         }
-
-        cache[n] = memoization(n-1,cache) + memoization(n-1,cache);
+        cache[n] = memoization(n-1, cache) + memoization(n-2, cache);
         return cache[n];
     }
 
