@@ -3,6 +3,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import ArrayAlgorithms.KadaneAlgorithm;
+import ArrayAlgorithms.SlidingWindow;
+import ArrayAlgorithms.TwoPointers;
 import BackTracking.BackTracking;
 import DynamicProgramming.TwoDimensionalDP;
 import Graphs.AdjacencyList;
@@ -44,13 +47,22 @@ public class Main {
 //        ArrayList<Integer> path = new ArrayList<>();
 //        t.canReachLeafPath(root,path);
 //        System.out.println(path);
-        AdjacencyList list = new AdjacencyList();
-        HashMap<String, ArrayList<String>> adjList = new HashMap<>();
-        System.out.println(list.dfs("A","E", list.buildAdjList(),new HashSet<>()));
-        System.out.println(list.bfs("A","D", list.buildAdjList()));
-        TwoDimensionalDP d = new TwoDimensionalDP();
-        int[][] cache = new int[4][4];
-        System.out.println(d.memoization(0,0,4,4,cache));
-        System.out.println(d.dp(4,4));
+        // AdjacencyList list = new AdjacencyList();
+        // HashMap<String, ArrayList<String>> adjList = new HashMap<>();
+        // System.out.println(list.dfs("A","E", list.buildAdjList(),new HashSet<>()));
+        // System.out.println(list.bfs("A","D", list.buildAdjList()));
+        // TwoDimensionalDP d = new TwoDimensionalDP();
+        // int[][] cache = new int[4][4];
+        // System.out.println(d.memoization(0,0,4,4,cache));
+        // System.out.println(d.dp(4,4));
+        int[] nums = {-1,2,3,4,7,9};
+        // KadaneAlgorithm k = new  KadaneAlgorithm();
+        // System.out.println(k.kadanes(nums));
+        // System.out.println(Arrays.toString(k.kadaneIndices(nums)));
+        // SlidingWindow w = new SlidingWindow();
+        // System.out.println(w.shorterSubarray(nums,7));
+        TwoPointers p = new TwoPointers();
+        System.out.println(Arrays.toString(p.indices(nums,7)));
+
     }
 }
