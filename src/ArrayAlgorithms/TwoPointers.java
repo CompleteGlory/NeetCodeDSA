@@ -1,6 +1,7 @@
 package ArrayAlgorithms;
 
 public class TwoPointers {
+    // given a sorted input array return the indices of the two items that sum up to target assumong there's only one solution
     public int[] indices(int[] nums,int target){
         int l =0;
         int r = nums.length-1;

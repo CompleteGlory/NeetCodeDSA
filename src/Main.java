@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 import ArrayAlgorithms.KadaneAlgorithm;
+import ArrayAlgorithms.PrefixSum;
 import ArrayAlgorithms.SlidingWindow;
 import ArrayAlgorithms.TwoPointers;
 import BackTracking.BackTracking;
@@ -61,8 +62,15 @@ public class Main {
         // System.out.println(Arrays.toString(k.kadaneIndices(nums)));
         // SlidingWindow w = new SlidingWindow();
         // System.out.println(w.shorterSubarray(nums,7));
-        TwoPointers p = new TwoPointers();
-        System.out.println(Arrays.toString(p.indices(nums,7)));
+        PrefixSum p = new PrefixSum();
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(2);
+        list.add(2);
+        list.add(2);
+        list.add(2);
+        list.add(2);
+        p.init(list);
+        System.out.println(p.rangeSum(1, 3));
 
     }
 }
